@@ -1,19 +1,19 @@
 
 
 
---- Web Framework & Server ---
+
 fastapi
 uvicorn
 python-multipart    # Required for UploadFile in main.py
 requests
 
---- Model Context Protocol (MCP) ---
+
 mcp                 # Includes FastMCP, ClientSession, and sse_client
 
---- Database ---
+
 supabase
 
---- LangChain Ecosystem ---
+
 langchain
 langchain-core
 langchain-community
@@ -21,6 +21,6 @@ langchain-experimental  # Required for SemanticChunker
 langchain-huggingface   # Required for HuggingFaceEmbeddings
 langchain-google-genai  # Required for ChatGoogleGenerativeAI
 
---- AI & PDF Processing Utilities ---
+
 pypdf                   # Required by PyPDFLoader to read PDFs
 sentence-transformers   # Required by HuggingFaceEmbeddings to run the model locally
