@@ -1,5 +1,6 @@
 import os
 import shutil
+
 from typing import List
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from pydantic import BaseModel
@@ -17,8 +18,6 @@ SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 
 
-# SUPABASE_URL = "https://wkbqzrkpfcnszegbeawi.supabase.co"
-# SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndrYnF6cmtwZmNuc3plZ2JlYXdpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQyMDM4NTUsImV4cCI6MjA3OTc3OTg1NX0.6CAyPdSqW-diYhtHtIuQ5YzsQut7_e46pULfiVpaOL0" 
 app = FastAPI(title="Supabase RAG API")
 
 # Initialize Supabase Client
@@ -118,3 +117,9 @@ async def query_db(request: QueryRequest):
     except Exception as e:
         print(f"Query error: {e}")
         raise HTTPException(status_code=500, detail=str(e))
+    
+
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.environ.get("PORT", 8080))  # Default 8080 for local
+    uvicorn.run("main:app", host="0.0.0.0", port=port)

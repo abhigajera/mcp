@@ -20,11 +20,10 @@ load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY")
 RAG_SERVER_URL = os.getenv("RAG_SERVER_URL")
-# GEMINI_API_KEY = "AIzaSyDukITl-VioSvL1UHv7cRJ8cYfa7YHncYE" 
-# OPENWEATHER_API_KEY = "6047fbda5443f89f6fcb4a8482fe9f4b"
+
 
 # RAG Server URL (Running on 8080)
-# RAG_SERVER_URL = "http://127.0.0.1:8080" 
+
 
 mcp = FastMCP("Abhi's Assistant")
 
