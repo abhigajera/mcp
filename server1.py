@@ -205,4 +205,4 @@ if __name__ == "__main__":
     
     # **CRITICAL FIX**: Use the stable SSE transport to fix the client unpack error
     # mcp.run(transport="sse")
-    mcp.run(transport="sse")
+    mcp.run(transport="streamable-http")
