@@ -119,7 +119,3 @@ async def query_db(request: QueryRequest):
         raise HTTPException(status_code=500, detail=str(e))
     
 
-if __name__ == "__main__":
-    import uvicorn
-    port = int(os.environ.get("PORT", 8080))  # Default 8080 for local
-    uvicorn.run("main:app", host="0.0.0.0", port=port)
